@@ -113,3 +113,51 @@ buttonCalls.forEach((calling)=>{
         
     })
 })
+
+// Copy
+
+const buttonsCopy = document.querySelectorAll("#copy")
+const alertMsgForCopy = document.getElementById("alert-msg")
+const copyNumber = document.getElementById("countcopy")
+
+
+
+buttonsCopy.forEach((copied)=>{
+    copied.addEventListener("click",function(){
+        // console.log(calling);
+        const number = copied.parentNode.parentNode.children[2].children[0];
+        const textCopy = number.innerText;
+        navigator.clipboard.writeText(textCopy);
+        const showDivForCopy = document.createElement("div");
+        showDivForCopy.innerHTML = `
+                      <div class="div-1 ">
+    <p>emergency-service.netify.app says</p>
+    </div>
+    <br>
+    <div class="div-2 flex gap-3">
+     <div class="calling flex gap-3">
+         <p>Number Copied </p>
+        <p>${number.innerText}</p>
+     </div>
+    </div>
+    <br>
+    <div class="div-3 flex justify-between">
+<div class=""></div>
+<div class="">
+    <button id="ok" class="bg-red-400 text-shadow-black w-16 h-10 rounded-xl ">OK</button>
+</div>
+    </div>
+        `
+        alertMsg.appendChild(showDivForCopy);
+        alertMsg.style.display = "block"
+        const okBtn = document.getElementById("ok");
+            okBtn.addEventListener("click",function(){
+                alertMsg.style.display = 'none'
+                alertMsg.textContent = '';
+                copyNumber.innerText = parseInt(copyNumber.innerText) + 1;
+                
+             })
+        
+    })
+})
+

@@ -20,14 +20,14 @@
 <body>
     <header>
         <!-- navigation bar -->
-        <div class="flex justify-between  px-[30px] mt-[25px]">
+        <div class="flex flex-col gap-[10px]  sm:flex-row justify-between  px-[30px] mt-[25px]">
             <!-- nav-left -->
             <div class="flex gap-[5px]">
                 <img src="./assets/logo.png" alt="logo of Bangladesh" class="w-12 h-12">
                 <h4 class="text-[#006747] font-extrabold">Emergency<br>Service</h4>
             </div>
             <!-- nav-right -->
-            <div class="flex gap-[15px]">
+            <div class="flex gap-[8px] lg:gap-[15px]">
                 <div class="flex items-center justify-center bg-[#41ff6b1a] rounded-[50px] h-[52px] w-[122px] ">
                     <p>0</p>
                     <img src="./assets/heart.png" alt="heart-picture" class="w-[30px] h-[30px]">
@@ -45,7 +45,7 @@
 
         <!-- banner -->
         <div
-            class=" w-[100%] bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)50%,rgba(1,50,35,1)100%)] flex flex-col items-center justify-center px-[60px] py-[22px] mt-[25px]">
+            class=" w-[100%] bg-[linear-gradient(90deg,rgba(1,49,34,1),rgba(0,103,71,1)50%,rgba(1,50,35,1)100%)] flex flex-col items-center justify-center mt-[25px] px-[20px] py-[5px] md:px-[40px] py-[10px] lg:px-[60px] py-[22px] ">
             <img src="./assets/logo-dark.png" alt="logo-Bangladesh" class="h-[92px] w-[92px]">
             <h3 class="text-[#ffffff] font-bold text-[40px]">Emergency Service Directory</h3>
             <p class="text-[#ffffff] font-[600] text-[20px]">Government Emergency Services at Your Fingertip – A Project
@@ -54,10 +54,10 @@
     </header>
     <main>
         <!-- cards -->
-        <div class="grid px-5 grid-cols-[calc(75%-15px)_calc(25%-15px)] gap-[30px]  bg-[#f5fff6] pt-[50px] pb-[80px]">
+        <div class="grid grid-cols-1 bg-[#f5fff6] pt-[50px] pb-[80px]  px-5  lg:grid-cols-[calc(75%-15px)_calc(25%-15px)] gap-[30px]">
 
             <!-- card left -->
-            <div class="grid grid-cols-3 gap-[30px]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-[8px] md:gap-[15px] lg:grid-cols-3 gap-[30px]">
                 <!-- one card -->
                 <div class=" p-[25px] rounded-[12px] bg-[#ffffff] shadow-md">
                     <div class="flex justify-between">
@@ -216,7 +216,7 @@
                 <!-- one card -->
                 <div class=" p-[25px] rounded-[12px] bg-[#ffffff] shadow-md">
                     <div class="flex justify-between">
-                        <img src="./assets/emergency.png" alt="emergency-alarm"
+                        <img src="./assets/brac.png" alt="emergency-alarm"
                             class="w-[50px] h-[50px] rounded-2xl bg-[#ffe3e2]">
                         <i class="fa-regular fa-heart"></i>
                     </div>
@@ -238,7 +238,7 @@
                 <!-- one card -->
                 <div class=" p-[25px] rounded-[12px] bg-[#ffffff] shadow-md">
                     <div class="flex justify-between">
-                        <img src="./assets/emergency.png" alt="emergency-alarm"
+                        <img src="./assets/Bangladesh-Railway.png" alt="emergency-alarm"
                             class="w-[50px] h-[50px] rounded-2xl bg-[#ffe3e2]">
                         <i class="fa-regular fa-heart"></i>
                     </div>

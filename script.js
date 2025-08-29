@@ -27,7 +27,7 @@ buttonCalls.forEach((calling)=>{
         
         if(parseInt(coinNumber.innerText)<20){
             // console.log(coinNumber.innerText);
-            
+            document.getElementById("alertblur").style.display = 'block';
             const showDiv = document.createElement("div");
             showDiv.innerHTML = `
                <div class="div-1 ">
@@ -59,12 +59,15 @@ buttonCalls.forEach((calling)=>{
             okBtn.addEventListener("click",function(){
                 alertMsg.style.display = 'none'
                 alertMsg.textContent = '';
+                document.getElementById("alertblur").style.display = 'none';
             })
             return;
         }
+        document.getElementById("alertblur").style.display = 'block';
         const name = calling.parentNode.parentNode.children[1].children[1];
         const number = calling.parentNode.parentNode.children[2].children[0];
         const showDiv = document.createElement("div");
+        
         showDiv.innerHTML = `
                       <div class="div-1 ">
     <p>emergency-service.netify.app says</p>
@@ -91,6 +94,7 @@ buttonCalls.forEach((calling)=>{
         alertMsg.style.display = "block"
         const okBtn = document.getElementById("ok");
             okBtn.addEventListener("click",function(){
+                document.getElementById("alertblur").style.display = 'none';
                 alertMsg.style.display = 'none'
                 alertMsg.textContent = '';
                 coinNumber.innerText = parseInt(coinNumber.innerText)-20;
@@ -125,6 +129,7 @@ const copyNumber = document.getElementById("countcopy")
 buttonsCopy.forEach((copied)=>{
     copied.addEventListener("click",function(){
         // console.log(calling);
+        document.getElementById("alertblur").style.display = 'block';
         const number = copied.parentNode.parentNode.children[2].children[0];
         const textCopy = number.innerText;
         navigator.clipboard.writeText(textCopy);
@@ -154,6 +159,7 @@ buttonsCopy.forEach((copied)=>{
             okBtn.addEventListener("click",function(){
                 alertMsg.style.display = 'none'
                 alertMsg.textContent = '';
+                document.getElementById("alertblur").style.display = 'none';
                 copyNumber.innerText = parseInt(copyNumber.innerText) + 1;
                 
              })
